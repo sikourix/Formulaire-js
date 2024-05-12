@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="formulaire">
+    <h1>Inscription</h1>
+    <form action="bienvenue.html"> 
+        <!--NOM : doit avoir plus que 3 caractères-->
+        <label for="nom">Nom :</label><br>
+        <!-- div vide pour afficher le message d'erreur en rouge -->
+        <div id="erreurNom" class="error"></div>
+        <!-- C'est dans l'input qu'on retrouve l'iD du nom -->
+        <input class="champ" type="text" id="nom" placeholder="&#128100 Votre nom">
+        <br><br>
+
+        <!-- Prénom : doit avoir plus que 3 caractères -->
+        <label for="prenom">Prénom :</label><br>
+        <div id="erreurPrenom" class="error"></div>
+        <input class="champ" type="text" id="prenom" placeholder="&#128100 Votre prénom">
+        <br><br>
+
+        <!-- Date de naissance -->
+        <label for="dateBirth">Date de naissance :</label><br>
+        <div id="erreurDateBirth" class="error"></div>
+        <input class="champ" type="text" id="dateBirth" placeholder="&#128100 Votre date de naissance">
+        <br><br>
+
+        <!-- Lieu de naissance -->
+        <label for="placeBirth">Lieu de naissance :</label><br>
+        <div id="erreurPlaceBirth" class="error"></div>
+        <input class="champ" type="text" id="placeBirth" placeholder="&#128100 Votre lieu de naissance">
+        <br><br>
+
+        <!-- Signe astro -->
+        <label for="signe">Signe astrologique :</label><br>
+        <div id="erreurSigne" class="error"></div>
+        <select class="champ" name="signe" id="signe">
+            <option value="">--Choisissez un signe--</option>
+            <option value="Taureau">Taureau</option>
+            <option value="Scorpion">Scorpion</option>
+            <option value="Poisson">Poisson</option>
+        </select>
+        <br><br>
+
+        <!-- Email : doit correspondre à sa regex -->
+        <label for="email">Email :</label><br>
+        <div id="erreurEmail" class="error"></div>
+        <input class="champ" type="email" id="email" placeholder="&#128100 Votre email">
+        <br><br>
+
+        <!-- Mot de passe (1ere saisie) : doit corréspondre à sa regex -->
+        <label for="passWord">Mot de passe :</label><br>
+        <div id="erreurPassWord" class="error"></div>
+        <input class="champ" type="password" id="passWord" placeholder="&#128274 Votre mot de passe">
+        <br><br>
+
+        <!--2e saisie de MDP : doit correspondre à la 1ere saisie-->
+        <label for="passWord2">Confirmez le mot de passe :</label><br>
+        <div id="erreurPassWord2" class="error"></div>
+        <input class="champ" type="password" id="passWord2" placeholder="&#128274 Votre mot de passe">
+        <br><br>
+
+        <!-- Description : entre 10 et 15 caractères -->
+        <label for="description">Description :</label><br>
+        <div id="erreurDescription" class="error"></div>
+        <textarea id="description" cols="30" rows="10" onkeyup="compteur()"></textarea>
+        <div id="compteur">0 Caractère</div><br>
+        <input type="submit" class="submit" value="ENVOYER">
+    </form>
+</div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

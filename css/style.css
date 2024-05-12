@@ -1,0 +1,71 @@
+/* Body styles */
+body {
+    background-position: center;
+    background-size: cover;
+    background-image: url('../images/fond.png');
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+}
+
+.formulaire,
+#ficheInscription {
+    width: 300px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: fit-content;
+}
+
+form {
+    padding: 2px 50px;
+}
+
+textarea {
+    border: none;
+    border-bottom: 1px solid #000;
+    margin-bottom: 15px;
+}
+
+.champ {
+    border: none;
+    /* Supprime la bordure par défaut */
+    border-bottom: 1px solid #000;
+    /* Ajoute une ligne en bas */
+    outline: none;
+    /* Supprime la bordure de mise au point */
+    height: 20px;
+    /* Ajustez la hauteur selon vos besoins */
+    margin: 5px;
+    box-sizing: border-box;
+    /* Inclut le rembourrage et la bordure dans la hauteur totale */
+}
+
+.champ:focus {
+    border-bottom: 2px solid #00f;
+}
+
+.error {
+    color: red;
+}
+
+.submit {
+    background-position: center;
+    background-size: cover;
+    background-image: url('../images/fond.png');
+    color: white;
+    width: 250px;
+    padding: 5px 15px;
+    margin: 20px 0px;
+    border-radius: 15px;
+    cursor: pointer;
+}
